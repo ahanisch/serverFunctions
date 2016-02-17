@@ -5,10 +5,10 @@ Usage
  - open the file `serverFunctions.sh` and set the following variables to configure the ssh connection:
  
  ```shellscript
-    sf_HOST="xxxxx"
-    sf_USER="xxxxx"
-    sf_KEYFILE=""
-    sf_SSH_PORT="22"
+    sf_HOST="xxxxx"    # ssh hostname
+    sf_USER="xxxxx"    # ssh user
+    sf_KEYFILE=""      # identity file
+    sf_SSH_PORT="22"   # ssh port
 ```
 
 - `source serverFunctions.sh`
