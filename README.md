@@ -9,29 +9,35 @@ Usage
     sf_USER="xxxxx"    # ssh user
     sf_KEYFILE=""      # identity file
     sf_SSH_PORT="22"   # ssh port
+    sf_SYNCED_FOLDER="syncedFiles"
 ```
 
-- `source serverFunctions.sh`
-- `sshToServer`
-- `ftpToServer`
-- `syncFile 'myApplication/logs/main.log'`
-- `gitAddRemote 'git/MyProject.git'`
+- `source serverFunctions.sh` (see [source operator](http://ss64.com/bash/source.html))
+- then you can run one of the following functions from the terminal:
+  - `sshToServer`
+  - `ftpToServer`
+  - `syncFile 'myApplication/logs/main.log'`
+  - `gitAddRemote 'git/MyProject.git'`
 
 
 Documentation
 -------------
 
 `sshToServer`
+
     login to server
 
 `ftpToServer`
-    ftp to server
+
+    login to server for file transfer
 
 `syncFile`
-    sync remote file or folder to local
-    local folder is defined in variable sf_SYNCED_FOLDER
+
+    sync remote file or folder to local file system
+    local folder is defined in variable sf_SYNCED_FOLDER (default: "syncedFiles")
     @param $1	file or path
 
 `gitAddRemote`
+
     add bare repository on server as remote to local git repository
-    @param $1 repository dir on server, e.g. '~/git/MyProject.git'
+    @param $1 repository folder on server, e.g. '~/git/MyProject.git'
