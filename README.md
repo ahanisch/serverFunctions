@@ -12,7 +12,7 @@ Usage
     sf_SYNCED_FOLDER="syncedFiles"
 ```
 
-- `source serverFunctions.sh` (see [source operator](http://ss64.com/bash/source.html))
+- `source serverFunctions.sh` ([source operator](http://ss64.com/bash/source.html))
 - then you can run one of the following functions from the terminal:
   - `sshToServer`
   - `ftpToServer`
@@ -31,13 +31,13 @@ Documentation
 
     login to server for file transfer
 
-`syncFile`
+`syncFile $1`
 
     sync remote file or folder to local file system
     local folder is defined in variable sf_SYNCED_FOLDER (default: "syncedFiles")
     @param $1	file or path
 
-`gitAddRemote`
+`gitAddRemote $1`
 
-    add bare repository on server as remote to local git repository
+    add an existing bare repository on server as remote to local git repository
     @param $1 repository folder on server, e.g. '~/git/MyProject.git'
