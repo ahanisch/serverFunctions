@@ -26,6 +26,7 @@ Documentation
 `sshToServer`
 
     login to server
+    the ssh connection can be configured by the variables sf_HOST, sf_USER, sf_KEYFILE and sf_SSH_PORT (s.a.)
 
 `ftpToServer`
 
