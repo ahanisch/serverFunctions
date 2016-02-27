@@ -16,8 +16,8 @@ Usage
 - then you can run one of the following functions from the terminal:
   - `sshToServer`
   - `ftpToServer`
-  - `syncFile 'myApplication/logs/main.log'`
-  - `gitAddRemote 'git/MyProject.git'`
+  - `syncFile 'myBackendApplication/logs/main.log'`
+  - `gitAddRemote '~/git/MyProject.git'`
 
 
 Documentation
