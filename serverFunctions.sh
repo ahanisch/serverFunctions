@@ -38,13 +38,3 @@ function gitAddRemote
 	echo "git remote add origin $remoteUrl"
 	git remote add origin "$remoteUrl"
 }
-
-function explainShell
-{
-	local sf_cmd urlEncoded
-	export sf_cmd="$1"
-	[[ -z "$sf_cmd" ]] && echo "First parameter must be the command line" && return 1
-	urlEncoded=$(perl -MURI::Escape -e 'print uri_escape($ENV{sf_cmd});')
-	w3m "http://explainshell.com/explain?cmd=$urlEncoded"
-}
-
