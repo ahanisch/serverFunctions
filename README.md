@@ -2,7 +2,7 @@ Usage
 -----
 
  - `wget https://raw.githubusercontent.com/ahanisch/serverFunctions/master/serverFunctions.sh`
- - open the file `serverFunctions.sh` and set the following variables to configure the ssh connection:
+ - Open the file `serverFunctions.sh` and set the following variables to configure the ssh connection:
  
  ```shellscript
     sf_HOST="xxxxx"    # ssh hostname
@@ -13,7 +13,7 @@ Usage
 ```
 
 - `source serverFunctions.sh` ([source operator](http://ss64.com/bash/source.html))
-- then you can run one of the following functions from the terminal:
+- Then you can run one of the following functions from the terminal (press TAB for autocomplete):
   - `sshToServer`
   - `ftpToServer`
   - `syncFile 'myBackendApplication/logs/main.log'`
@@ -25,20 +25,20 @@ Documentation
 
 `sshToServer`
 
-    login to server
-    the ssh connection can be configured by the variables sf_HOST, sf_USER, sf_KEYFILE and sf_SSH_PORT (s.a.)
+    Login to server.
+    The ssh connection can be configured by the variables sf_HOST, sf_USER, sf_KEYFILE and sf_SSH_PORT (s.a.).
 
 `ftpToServer`
 
-    login to server for file transfer
+    Login to server for easy file transfer.
 
 `syncFile $1`
 
-    sync remote file or folder to local file system
-    local folder is defined in variable sf_SYNCED_FOLDER (default: "syncedFiles")
+    Sync remote file or folder to local file system.
+    The local folder is defined in variable sf_SYNCED_FOLDER (default: "syncedFiles").
     @param $1	file or path
 
 `gitAddRemote $1`
 
-    add an existing bare repository on server as remote to local git repository
+    Add an existing bare repository on server as remote to local git repository.
     @param $1 repository folder on server, e.g. '~/git/MyProject.git'
